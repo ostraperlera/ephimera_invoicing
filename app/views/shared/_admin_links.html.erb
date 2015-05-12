@@ -1,0 +1,5 @@
+					<li><%= link_to "Companies", admin_companies_path %></li>
+					<li><%= link_to "Invoices", admin_invoices_path %></li>
+					<li><%= link_to "Users", admin_users_path %></li>
+					<li><%= link_to current_user.email, root_path %></li>
+					<li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>

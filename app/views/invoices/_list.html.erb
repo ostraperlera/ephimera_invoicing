@@ -1,0 +1,27 @@
+<table class="table">
+  <thead>
+    <tr>
+			<th>Submitted</th>
+			<th>Number</th>
+      <th>Purchase order</th>
+			<th>Item1</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% current_user.invoices.each do |invoice| %>
+			<tr>
+				<td><%= invoice.created_at.strftime("%d/%m/%Y") %>
+        <td><%= link_to invoice.number, invoice %></td>
+        <td><%= invoice.purchase_order %></td>
+        <td><%= invoice.item1 %></td>
+		    <td><%= invoice.total %></td>
+			</tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Invoice', new_invoice_path, :class => "btn btn-md btn-primary"  %>

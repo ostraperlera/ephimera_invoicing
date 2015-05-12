@@ -1,0 +1,12 @@
+<span class=" glyphicon glyphicon-chevron-left" aria-hidden="true"></span><%= link_to 'Back to dashboard', dashboard_path %>
+
+<% if current_user.companies.empty? %>
+	<div class="alert alert-danger"> 
+	<span>You must create a company to submit invoices. <%= link_to "Click to create a company", new_company_path %>.</span>
+	</div>
+<% end %>
+
+<h1 class='page-header'>New invoice</h1 class='page-header'>
+
+<%= render 'form' %>
+

@@ -1,0 +1,42 @@
+<div class="row">
+	<div class="col-md-12">
+		<%= form_for(@company) do |f| %>
+			<% if @company.errors.any? %>
+				<div id="error_explanation">
+					<h2><%= pluralize(@company.errors.count, "error") %> prohibited this company from being saved:</h2>
+
+					<ul>
+						<% @company.errors.full_messages.each do |message| %>
+							<li><%= message %></li>
+						<% end %>
+					</ul>
+				</div>
+			<% end %>
+			<%= f.hidden_field :user_id, :value => current_user.id %>
+	</div>
+	<div class="field col-md-9">
+		<%= f.text_field :name, :placeholder => :name %>
+	</div>
+	<div class="field col-md-3">
+		<%= f.text_field :vat_id, :placeholder => :vat_id %>
+	</div>
+	<div class="field col-md-9">
+		<%= f.text_field :address, :placeholder => :address %>
+	</div>
+	<div class="field col-md-3">
+		<%= f.text_field :postcode, :placeholder => :postcode %>
+	</div>
+	<div class="field col-md-4">
+		<%= f.text_field :city, :placeholder => :city %>
+	</div>
+	<div class="field col-md-4">
+		<%= f.text_field :country, :placeholder => :country %>
+	</div>
+	<div class="field col-md-4">
+		<%= f.text_field :phone, :placeholder => :phone %>
+	</div>
+	<div class="actions col-md-12">
+		<%= f.submit "Create company", :class => "btn btn-lg btn-primary" %>
+	</div>
+	<% end %>
+</div>

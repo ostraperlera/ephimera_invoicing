@@ -1,0 +1,5 @@
+= users should not be able to see /show companies
+= Fix notices and alerts so that they're more visible. 
+= Fix alerts in company/new.html where creating an invalid company doesnt work but doesnt produce any errors
+
+

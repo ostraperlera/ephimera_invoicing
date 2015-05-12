@@ -1,0 +1,44 @@
+<h1 class='page-header'>Listing invoices</h1 class='page-header'>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Purchase order</th>
+			<th>Item1</th>
+      <th>Subtotal1</th>
+      <th>Item2</th>
+		  <th>Subtotal2</th>
+			<th>Item3</th>
+      <th>Subtotal3</th>
+			<th>Vat</th>
+			<th>Irpf</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @invoices.each do |invoice| %>
+      <tr>
+        <td><%= link_to invoice.number, invoice %></td>
+        <td><%= invoice.purchase_order %></td>
+        <td><%= invoice.item1 %></td>
+        <td><%= invoice.item2 %></td>
+        <td><%= invoice.item3 %></td>
+        <td><%= invoice.subtotal1 %></td>
+        <td><%= invoice.subtotal2 %></td>
+        <td><%= invoice.subtotal3 %></td>
+        <td><%= invoice.total %></td>
+        <td><%= invoice.vat %></td>
+        <td><%= invoice.irpf %></td>
+        <td><%= link_to 'Show', invoice %></td>
+        <td><%= link_to 'Edit', edit_invoice_path(invoice) %></td>
+        <td><%= link_to 'Destroy', invoice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Invoice', new_invoice_path %>

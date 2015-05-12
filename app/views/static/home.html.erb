@@ -1,0 +1,25 @@
+<div class="row">
+	<div class="col-md-8">
+
+		<p>This is Ephimera's invoicing system. If you are one of our providers, you can submit your invoices for payment using this online tool.</p>
+
+		<p>To submit your invoices you will need a purchase order. Please make sure you have been provided with one by the person in our team that required your services</p>
+
+		<p>If you already have a user, log in to proceed. Otherwise, <%= link_to "please sign up", new_user_registration_path %>.</p>
+
+	</div>		
+
+	<div class="col-md-4">
+
+		<%= form_for(:user, :url => session_path(:user)) do |f| %>
+			<%= f.email_field :email, :placeholder => "Email" %>
+			<%= f.password_field :password, autocomplete: "off", :placeholder => "Password" %>
+			<%= f.check_box :remember_me %> <%= f.label :remember_me %>
+			<%= f.submit "Sign in", :class => "btn btn-lg btn-primary" %>
+		<% end %>
+		<div class="devise_links">
+			<%=link_to "Forgot your password?", new_password_path(:user) %>
+		</div>
+	</div>
+</div>
+

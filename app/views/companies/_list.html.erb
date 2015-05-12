@@ -1,0 +1,31 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Postcode</th>
+      <th>City</th>
+      <th>Country</th>
+      <th>Phone</th>
+      <th>Vat ID</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% current_user.companies.each do |company| %>
+      <tr>
+        <td><%= link_to company.name, edit_company_path(company) %></td>
+        <td><%= company.address %></td>
+        <td><%= company.postcode %></td>
+        <td><%= company.city %></td>
+        <td><%= company.country %></td>
+        <td><%= company.phone %></td>
+        <td><%= company.vat_id %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Company', new_company_path, :class => "btn btn-md btn-primary" %>

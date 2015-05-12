@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: MyString
+  purchase_order: MyString
+  item1: MyString
+  item2: MyString
+  item3: MyString
+  subtotal1: MyString
+  subtotal2: MyString
+  subtotal3: MyString
+  total: MyString
+  vat: MyString
+  irpf: MyString
+
+two:
+  number: MyString
+  purchase_order: MyString
+  item1: MyString
+  item2: MyString
+  item3: MyString
+  subtotal1: MyString
+  subtotal2: MyString
+  subtotal3: MyString
+  total: MyString
+  vat: MyString
+  irpf: MyString

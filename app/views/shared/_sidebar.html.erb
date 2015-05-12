@@ -1,0 +1,19 @@
+<div class="sidebar col-md-3">
+<div id="profile-data">
+	<h2 class="page-header">Your profile</h1>
+	<%= current_user.email %><br />
+	Member since <%= current_user.created_at %><br />
+	<%= link_to "Edit Profile", edit_user_registration_path %>
+</div>
+<div id="quick-help">
+	<h2 class="page-header">Quick Help</h2>
+	<span class="glyphicon glyphicon-ok" aria-hidden="true"></span> To begin submitting invoices, create a company profile first.<br />
+	<span class="glyphicon glyphicon-ok" aria-hidden="true"></span> To upload your invoices, select "new invoice" and fill out the required data. <br />
+	<span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Once your invoices are submitted our team will be notified and the payment process will begin.<br />
+	</ul>
+</div>
+</div>
+
+
+
+
